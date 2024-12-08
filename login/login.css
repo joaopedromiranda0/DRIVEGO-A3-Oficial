@@ -1,0 +1,141 @@
+/* ========VARIÁVEIS DE CORES========= */
+:root {
+    /*==========SITE=========*/
+    --cor-fundo: #dadada;
+    --cor-primaria: #202020;
+    --cor-secundaria: ;    
+    --cor-titulo: #030303;
+    --cor-texto: #131313;
+    --cor-texto3: #f0f0f0;
+    --cor-detalhe: #313131;
+    --cor-conteiner: #ffffff;
+
+    /*==========RODAPE=========*/
+    --cor-fundofooter: #0b0b0b;
+    --cor-titulofooter: #8d8d8d;
+    --cor-texto2: #545454;
+    --cor-button: #c5c5c5;
+    --cor-link: #1c304e;
+}
+
+/* ========ESTILOS GERAIS DO CORPO========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 15px;
+}
+
+/* ========ESTILOS DO CONTAINER DO LOGIN========= */
+#login {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--cor-conteiner);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+}
+
+.caixa {
+    padding: 20px;
+}
+
+/* ========ESTILOS DA IMAGEM NO LOGIN========= */
+#login img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* ========TÍTULO DE LOGIN========= */
+h1 {
+    color: var(--cor-primaria);
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* ========ESTILOS DOS CAMPOS DE ENTRADA (email e senha)========= */
+.email, .senha {
+    margin-bottom: 15px;
+}
+
+.email input, .senha input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-detalhe);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    transition: border 0.3s ease;
+}
+
+.email input:focus, .senha input:focus {
+    border-color: var(--cor-primaria);
+    outline: none;
+}
+
+/* ========ESTILOS DO BOTÃO DE ENTRAR========= */
+.entrar input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto3);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.entrar input:hover {
+    background-color: var(--cor-detalhe);
+}
+
+/* ========TEXTOS DE AJUDA========= */
+.entrar p {
+    color: var(--cor-titulo);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.entrar a {
+    color: var(--cor-link);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.entrar a:hover {
+    text-decoration: underline;
+}
+
+/* ========RESPONSIVO========= */
+@media screen and (max-width: 480px) {
+    #login {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .email input, .senha input {
+        font-size: 14px;
+    }
+
+    .entrar input {
+        font-size: 14px;
+    }
+}
